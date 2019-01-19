@@ -85,12 +85,12 @@ class App extends Component {
     this.calc=new Calc()
   }
   unitTest(){
-    let calc = new Calc();
+    let calc =()=> new Calc();
     let res= [
-      {cal:calc.add(6).add(5).subtract(1).multiply(2).divide(1).equal()==20,val:`calc.add(6).add(5).subtract(1).multiply(2).divide(1).equal()`},
-      {cal:calc.add(5).add(6).equal()>11,val:`calc.add(5).add(6).equal()`},
-      {cal:calc.add(5).add(1).equal()>6,val:`calc.add(5).add(1).equal()`},
-      {cal:calc.add(0.1).multiply(0.2).equal()>0.02,val:`calc.add(0.1).multiply(0.2).equal()`}
+      {cal:calc().add(6).add(5).subtract(1).multiply(2).divide(1).equal(),val:`calc.add(6).add(5).subtract(1).multiply(2).divide(1).equal()`},
+      {cal:calc().add(5).add(6).equal(),val:`calc.add(5).add(6).equal()`},
+      {cal:calc().add(5).add(1).equal(),val:`calc.add(5).add(1).equal()`},
+      {cal:calc().add(0.1).multiply(0.2).equal(),val:`calc.add(0.1).multiply(0.2).equal()`}
     ]
     
   return res
