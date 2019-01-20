@@ -48,7 +48,7 @@ class Calc1 extends Component {
  
 
   handleCalc(el){
-    let newCal= new Calc()
+    let newCal=()=> new Calc()
     el=String(el);
     //regex to split the string into array based upon non numbers
     let regx = /((?!\.)\D)/;
@@ -62,7 +62,7 @@ class Calc1 extends Component {
       
       //iterating over each string array item
       split.forEach((ele,i) => {
-        //sett2ing the first input as initial number for the calc object
+        //setting the first input as initial number for the calc object
         if(!first){
           result+=`this.calc.add(${ele})`
           first=true; 
@@ -83,9 +83,9 @@ class Calc1 extends Component {
               break;
             case '(':
                 if(split[i-1] !== ''){
-                    result+=`.multiply(newCal.add`
+                    result+=`.multiply(newCal().add`
                 }else{
-                    result+=`(newCal.add`
+                    result+=`(newCal().add`
                 }
               break;
             case ')':
@@ -105,6 +105,7 @@ class Calc1 extends Component {
         }
 
       });
+
       let final=false;
       try {
         final = eval(result)
