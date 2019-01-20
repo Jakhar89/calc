@@ -1,19 +1,19 @@
 class Calc {
     res=0;  
   
-    add=(num)=>{
+    add=(num=0)=>{
         this.res+=Number(num);
         return this;
     };
-    subtract=(num)=>{
+    subtract=(num=0)=>{
         this.res-=Number(num);
         return this;
     };
-    multiply=(num)=>{
+    multiply=(num=0)=>{
         this.res*=Number(num);
         return this;
     };
-    divide=(num)=>{
+    divide=(num=0)=>{
         this.res/=Number(num);
         return this;
     }
