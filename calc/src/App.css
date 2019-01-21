@@ -36,9 +36,9 @@
 .word-wrap{
   overflow-wrap: break-word;
 }
-@media screen and (max-width:767px){
-   .btn.override{
-     max-width: 20%;
-   }
 
+.btn.override{
+  max-width: 20%;
 }
+
+
